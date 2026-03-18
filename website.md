@@ -731,35 +731,35 @@ Engage with J&K Bank's latest EOI, tenders, and notifications for seamless and t
 | Title | Last Date |
 | --- | --- |
 | [Online Request for Proposal (e-RFP) for Supply, Implementation and Maintenance of End to End Trade Finance Solution](/tenders/online-request-proposal-e-rfp-supply-implementation-and-maintenance-end-end-trade-finance) | Apr 06, 2026 |
+| [UNSCANNABLE EXTRACTION FAILED]FW: Online Request of Tender (e-NIT) For Development of premises for J&K bank extension Counter at PCR Batamaloo Srinagar by way of Civil-Interior works](/tenders/unscannable-extraction-failedfw-online-request-tender-e-nit-development-premises-jk-bank) | Mar 30, 2026 |
+| [Online Request of Tender (e-NIT) For Development of premises for J&K bank extension Counter at PCR Batamaloo Srinagar by way of Civil-Interior works](/tenders/online-request-tender-e-nit-development-premises-jk-bank-extension-counter-pcr-batamaloo) | Mar 30, 2026 |
 | [Online Request For Proposal (e-RFP) for Supply, Implementation and Support Services for Cyber Governance, Risk and Compliance Platform](/tenders/online-request-proposal-e-rfp-supply-implementation-and-support-services-cyber-governance) | Mar 27, 2026 |
 | [On-Line RFP (e-RFP) for Printing & Supply of Printed Stationery Items](/tenders/line-rfp-e-rfp-printing-supply-printed-stationery-items-0) | Mar 27, 2026 |
+| [Online Request of Tender (e-NIT) For Development of J&K Bank’s Extension Counter at PCR Batmaloo, Srinagar, by way of Electrical & allied works](/tenders/online-request-tender-e-nit-development-jk-banks-extension-counter-pcr-batmaloo-srinagar-0) | Mar 25, 2026 |
+| [Online Request of Tender (e-NIT) For Development of premises for extension Counter at PCR Batamaloo Srinagar by way of Furniture Works](/tenders/online-request-tender-e-nit-development-premises-extension-counter-pcr-batamaloo-srinagar) | Mar 25, 2026 |
+| [Online Request of Tender (e-NIT) For Development of premises for extension Counter at PCR Batamaloo Srinagar by way of Furniture Works](/tenders/online-request-tender-e-nit-development-premises-extension-counter-pcr-batamaloo-srinagar-0) | Mar 25, 2026 |
+| [Online Request for Tender (e-NIT) For Re-development of J&K Bank’s Auditorium at Corporate Headquarters by way of composite worksDate Extension](/tenders/online-request-tender-e-nit-re-development-jk-banks-auditorium-corporate-headquarters-way) | Mar 23, 2026 |
+| [Online Request of Tender (e-NIT) For Development of J&K Bank’s Branch Thanger Chowk, Jammu by way of Electrical works and allied works](/tenders/online-request-tender-e-nit-development-jk-banks-branch-thanger-chowk-jammu-way-electrical) | Mar 23, 2026 |
+| [Online Request For Proposal for Middleware application for PMJJBY & PMSBY Schemes](/tenders/online-request-proposal-middleware-application-pmjjby-pmsby-schemes) | Mar 23, 2026 |
 | [Online Limited Tender Enquiry (LTE)) for Engagement of Legal Counsel for sale/transfer of shares in Metlife by Jammu and Kashmir Bank Ltd](/tenders/online-limited-tender-enquiry-lte-engagement-legal-counsel-saletransfer-shares-metlife) | Mar 23, 2026 |
 | [Online Request of Tender (e-NIT) For Development of premises for Branch Thanger Chowk by way of Civil-Interior works](/tenders/online-request-tender-e-nit-development-premises-branch-thanger-chowk-way-civil-interior) | Mar 23, 2026 |
-| [Online Request for Tender (e-NIT) For Re-development of J&K Bank’s Auditorium at Corporate Headquarters by way of composite worksDate Extension](/tenders/online-request-tender-e-nit-re-development-jk-banks-auditorium-corporate-headquarters-way) | Mar 23, 2026 |
-| [Online Request For Proposal for Middleware application for PMJJBY & PMSBY Schemes](/tenders/online-request-proposal-middleware-application-pmjjby-pmsby-schemes) | Mar 23, 2026 |
-| [Online Request of Tender (e-NIT) For Development of J&K Bank’s Branch Thanger Chowk, Jammu by way of Electrical works and allied works](/tenders/online-request-tender-e-nit-development-jk-banks-branch-thanger-chowk-jammu-way-electrical) | Mar 23, 2026 |
+| [Tender- Branch Udheywala days](/tenders/tender-branch-udheywala-days) | Mar 23, 2026 |
 | [Online Request for Tender (e-NIT) for Hiring of Cash Van for Currency Chest Azadpur](/tenders/online-request-tender-e-nit-hiring-cash-van-currency-chest-azadpur) | Mar 18, 2026 |
 | [Online Request of Tender (e-NIT) For Development of Branch at Samote Rajouri by way of Composite worksDate Extension](/tenders/online-request-tender-e-nit-development-branch-samote-rajouri-way-composite-works) | Mar 17, 2026 |
 | [Online Request of Tender (e-NIT) For Development of onsite ATM at Khawas Rajouri by way of composite worksDate Extension](/tenders/online-request-tender-e-nit-development-onsite-atm-khawas-rajouri-way-composite-works) | Mar 17, 2026 |
-| [Online Request of Tender (e-NIT) For STRUCTURAL REPAIRS OF PREMISES HOUSING BU-MOHAMMAD ALI ROAD MUMBAI](/tenders/online-request-tender-e-nit-structural-repairs-premises-housing-bu-mohammad-ali-road-mumbai) | Mar 16, 2026 |
-| [acquisition of permanent space housing its offsite CRM’s each at Aloosa Main Junction, Quil Market and Khadim Market Bandipora](/tenders/acquisition-permanent-space-housing-its-offsite-crms-each-aloosa-main-junction-quil-market) | Mar 16, 2026 |
 | [Online REQUEST FOR PROPOSAL (e-RFP) for APPOINTMENT OF CONSULTANT FOR INCOME TAX MATTERS](/tenders/online-request-proposal-e-rfp-appointment-consultant-income-tax-matters-2) | Mar 16, 2026 |
 | [E -Tender For Hiring Of Office Vehicle for Cluster head Delhi -1 of Delhi Zone for Cluster head Delhi -2 of Delhi Zone](/tenders/e-tender-hiring-office-vehicle-cluster-head-delhi-1-delhi-zone-cluster-head-delhi-2-delhi) | Mar 16, 2026 |
+| [acquisition of permanent space housing its offsite CRM’s each at Aloosa Main Junction, Quil Market and Khadim Market Bandipora](/tenders/acquisition-permanent-space-housing-its-offsite-crms-each-aloosa-main-junction-quil-market) | Mar 16, 2026 |
+| [Online Request of Tender (e-NIT) For STRUCTURAL REPAIRS OF PREMISES HOUSING BU-MOHAMMAD ALI ROAD MUMBAI](/tenders/online-request-tender-e-nit-structural-repairs-premises-housing-bu-mohammad-ali-road-mumbai) | Mar 16, 2026 |
 | [Acquisition of permanent premises for housing offsite ATM at panzgam kupwara and Wadipora Hanswara](/tenders/acquisition-permanent-premises-housing-offsite-atm-panzgam-kupwara-and-wadipora-hanswara) | Mar 16, 2026 |
 | [Online REQUEST FOR PROPOSAL (e-RFP) for APPOINTMENT OF CONSULTANT FOR INCOME TAX MATTERS](/tenders/online-request-proposal-e-rfp-appointment-consultant-income-tax-matters-1) | Mar 16, 2026 |
 | [Selection of Service Provider for Web Accessibility Auditor/Consultant for adoption of Accessibility Standards for J&K Bank's Digital Products and Services](/tenders/selection-service-provider-web-accessibility-auditorconsultant-adoption-accessibility) | Mar 13, 2026 |
 | [Online Request of Tender (e-NIT) For Development of EBU Chakrah by way of Composite Works](/tenders/online-request-tender-e-nit-development-ebu-chakrah-way-composite-works) | Mar 13, 2026 |
 | [Online Request for Tender (e-NIT) for Comprehensive AMC (Annual Maintenance Contract) of Window/Split Air Conditioning Units Installed at various Branches / Offices of the Bank in Jammu Zone](/tenders/online-request-tender-e-nit-comprehensive-amc-annual-maintenance-contract-windowsplit-air) | Mar 13, 2026 |
 | [Online Request of Tender (e-NIT) For Repair & Renovation works at JK Bank Branch Gajansoo by way of Composite Works (civil-interior, Furniture & Electrical)](/tenders/online-request-tender-e-nit-repair-renovation-works-jk-bank-branch-gajansoo-way-composite) | Mar 13, 2026 |
+| [Online Request of short term tender (e-NIT) For Supply, Installation, Testing & Commissioning of One No Passenger Elevator (13 passengers) in J&K BANK Zonal Office Srinagar including buyback of existing Otis make 6 Passenger Lift](/tenders/online-request-short-term-tender-e-nit-supply-installation-testing-commissioning-one-no) | Mar 13, 2026 |
 | [Tender Enquiry RFP Selection of Service Provider for ATM/Debit Switch & Debit Card Management System (DCMS) on hosted model](/tenders/tender-enquiry-rfp-selection-service-provider-atmdebit-switch-debit-card-management-system) | Mar 13, 2026 |
 | [Online Request of Tender (e-NIT) For Development of additional acquired area along with repair, renovation works at Branch Bhadoo, Kathua](/tenders/online-request-tender-e-nit-development-additional-acquired-area-along-repair-renovation) | Mar 13, 2026 |
-| [Online Request of short term tender (e-NIT) For Supply, Installation, Testing & Commissioning of One No Passenger Elevator (13 passengers) in J&K BANK Zonal Office Srinagar including buyback of existing Otis make 6 Passenger Lift](/tenders/online-request-short-term-tender-e-nit-supply-installation-testing-commissioning-one-no) | Mar 13, 2026 |
-| [Tender Document for Bank's Proposed branch Peeli Kothi Varanasi](/tenders/tender-document-banks-proposed-branch-peeli-kothi-varanasi) | Mar 12, 2026 |
-| [Re-advertisement regarding offer for premises of proposed Branch Qila Darhal](/tenders/re-advertisement-regarding-offer-premises-proposed-branch-qila-darhal-0) | Mar 11, 2026 |
-| [Tender for acquisition of premises for Offsite ATMs](/tenders/tender-acquisition-premises-offsite-atms) | Mar 10, 2026 |
-| [Tender for acquisition of Premises for Branch Muthi, Jammu](/tenders/tender-acquisition-premises-branch-muthi-jammu-0) | Mar 10, 2026 |
-| [Tender for housing Branch at Khanna District Ludhiana](/tenders/tender-housing-branch-khanna-district-ludhiana-0) | Mar 09, 2026 |
-| [Online Request of Tender (e-NIT) For Renovation/Development of J&K Bank’s Branch Unit at Qasba Hyhama, kupwara, along with onsite ATM by way of Electrical & allied works](/tenders/online-request-tender-e-nit-renovationdevelopment-jk-banks-branch-unit-qasba-hyhama-kupwara) | Mar 07, 2026 |
 
 * [Current page
   1](?page=0 "Current page")
@@ -871,7 +871,7 @@ Footer Bottom Bottom
 * [Beware of fictitious offers/lottery winnings/cheap funds offers : RBI Advisory](/beware-fictitious-offerslottery-winningscheap-funds-offers)
 * OUR BANK IS A MEMBER OF BCSBI - CERTIFICATE
 
-Last Updated: 16|03|2026
+Last Updated: 18|03|2026
 
 Copyright © 2026 J&K Bank. All rights reserved. [Application Development and Maintenance by cyfuture.cloud](https://cyfuture.cloud/)
 

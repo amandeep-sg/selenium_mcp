@@ -14,3 +14,11 @@ def accept_all_cookies(driver):
     except Exception as e:
         logger.error(e)
         return 0
+
+
+def get_all_cookies(driver):
+    try:
+        return driver.get_cookies()
+    except Exception as e:
+        logger.error(e)
+        return []
