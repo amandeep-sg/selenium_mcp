@@ -1,11 +1,31 @@
-from selenium.webdriver.common.window import WindowTypes
 import logging
+from fastmcp.tools import tool
+from fastmcp import Context
+
+from tools.web_driver import get_driver
 
 logger = logging.getLogger(__name__)
 
 
-def open_new_tab(driver, url):
+@tool(description="open url", tags={"manage url", "browser automation"})
+async def open_url(url: str, ctx: Context) -> bool:
     try:
+        driver = get_driver()
+        driver.get(url)
+        logger.info(f"URL opened {driver.current_url}")
+        return True
+    except Exception as e:
+        logger.error(e)
+        return False
+
+
+@tool(
+    description="open url in new tab of the existing browser window",
+    tags={"manage url", "browser automation"},
+)
+async def open_new_tab(url: str, ctx: Context) -> bool:
+    try:
+        driver = get_driver()
         driver.switch_to.new_window(WindowTypes.TAB)
         driver.get(url)
         logger.info(f"New tab opened {driver.current_url}")
@@ -15,8 +35,13 @@ def open_new_tab(driver, url):
         return False
 
 
-def open_new_window(driver, url):
+@tool(
+    description="open url in new browser window",
+    tags={"manage url", "browser automation"},
+)
+async def open_new_window(url: str, ctx: Context) -> bool:
     try:
+        driver = get_driver()
         driver.switch_to.new_window(WindowTypes.WINDOW)
         driver.get(url)
         logger.info(f"New window opened {driver.current_url}")
@@ -26,8 +51,13 @@ def open_new_window(driver, url):
         return False
 
 
-def close_current_tab(driver):
+@tool(
+    description="close the current tab",
+    tags={"manage url", "browser automation"},
+)
+async def close_current_tab(ctx: Context) -> bool:
     try:
+        driver = get_driver()
         driver.close()
         logger.info(f"Current tab closed {driver.current_url}")
         return True
@@ -36,8 +66,13 @@ def close_current_tab(driver):
         return False
 
 
-def switch_to_tab(driver, tab_index):
+@tool(
+    description="switch to the tab by tab index",
+    tags={"manage url", "browser automation"},
+)
+async def switch_to_tab(tab_index: int, ctx: Context) -> bool:
     try:
+        driver = get_driver()
         driver.switch_to.window(driver.window_handles[tab_index])
         logger.info(f"Switched to tab {tab_index}")
         return True
@@ -46,8 +81,13 @@ def switch_to_tab(driver, tab_index):
         return False
 
 
-def switch_to_tab_by_url(driver, url):
+@tool(
+    description="switch to the tab by url",
+    tags={"manage url", "browser automation"},
+)
+async def switch_to_tab_by_url(url: str, ctx: Context) -> bool:
     try:
+        driver = get_driver()
         original_handle = driver.current_window_handle
         for handle in driver.window_handles:  # iterate every open tab
             driver.switch_to.window(handle)  # switch to it
@@ -56,7 +96,7 @@ def switch_to_tab_by_url(driver, url):
                 logger.info(f"Switched to tab with URL: {current}")
                 return True  # stay on this tab ✅
         # no tab matched — go back to where we started
-        driver.switch_to.window(original_handle)
+        web_driver.driver.switch_to.window(original_handle)
         logger.error(f"Tab with URL '{url}' not found")
         return False
     except Exception as e:
