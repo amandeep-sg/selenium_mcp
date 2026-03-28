@@ -53,9 +53,10 @@ async def scroll_to_top(ctx: Context) -> bool:
     description="Scroll to the specific element on the webpage",
     tags={"scroll webpage", "browser automation"},
 )
-async def scroll_to_element(element: object, ctx: Context) -> bool:
+async def scroll_to_element(xpath: str, ctx: Context) -> bool:
     try:
         driver = await ctx.get_state("driver")
+        element = driver.find_element(By.XPATH, xpath)
         ActionChains(driver).move_to_element(element).perform()
         logger.info("Scrolled to element")
         return True
