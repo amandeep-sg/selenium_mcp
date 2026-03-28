@@ -23,7 +23,7 @@ async def input_text_by_xpath(xpath: str, text: str, ctx: Context) -> bool:
             element.send_keys(text)
             logger.info("Typed text into the element")
             return f"Typed text '{text}' into the element"
-        logger.info(
+        logger.warn(
             f"Element enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
         )
         return f"Element enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
@@ -44,7 +44,7 @@ async def click_checkbox_by_xpath(xpath: str, ctx: Context) -> bool:
             element.click()
             logger.info(f"Checkbox is selected: {element.is_selected()}")
             return f"Checkbox is selected: {element.is_selected()}"
-        logger.info(
+        logger.warn(
             f"Checkbox enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
         )
         return f"Checkbox enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
@@ -65,7 +65,7 @@ async def click_radio_button_by_xpath(xpath: str, ctx: Context) -> bool:
             element.click()
             logger.info(f"Radio button is selected: {element.is_selected()}")
             return f"Radio button is selected: {element.is_selected()}"
-        logger.info(
+        logger.warn(
             f"Radio button enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
         )
         return f"Radio button enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
@@ -86,7 +86,7 @@ async def get_all_options_by_xpath(xpath: str, ctx: Context) -> list[str]:
             select = Select(element)
             logger.info("Got all options from dropdown")
             return f"All options from the dropdown are: {[option.text for option in select.options]}"
-        logger.info(
+        logger.warn(
             f"Element enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
         )
         return f"Element enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"
@@ -96,7 +96,7 @@ async def get_all_options_by_xpath(xpath: str, ctx: Context) -> list[str]:
 
 
 @tool(
-    description="Select option from a dropdown on a webpage",
+    description="Select option from a dropdown (select tag) on a webpage",
     tags={"input", "browser automation"},
 )
 async def select_option_by_xpath(xpath: str, option_text: str, ctx: Context) -> bool:
@@ -106,9 +106,11 @@ async def select_option_by_xpath(xpath: str, option_text: str, ctx: Context) -> 
         if element.is_enabled() and element.is_displayed():
             select = Select(element)
             select.select_by_visible_text(option_text)
-            logger.info(f"Selected option from dropdown {select.options.text}")
-            return f"Selected option from the dropdown is {select.options.text}"
-        logger.info(
+            logger.info(
+                f"Selected option from dropdown {[option.text for option in select.all_selected_options]}"
+            )
+            return f"Selected option from the dropdown is {[option.text for option in select.all_selected_options]}"
+        logger.warn(
             f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
         )
         return f"Element enabled: {element.is_enabled()}, displayed: {element.is_displayed()}"

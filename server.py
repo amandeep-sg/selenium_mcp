@@ -7,6 +7,7 @@ from google import genai
 from fastmcp.server.providers import FileSystemProvider
 import logging
 
+
 load_dotenv(".env")
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
@@ -37,38 +38,13 @@ gemini_client = genai.Client(api_key=gemini_api_key)
 logger = logging.getLogger(__name__)
 
 
-# async def main():
-#     async with mcp_client:
-#         # Basic server interaction
-#         await mcp_client.ping()
-#         await mcp_client.call_tool("initialize_driver", {})
-
-#         # List available operations
-#         tools = await mcp_client.list_tools()
-#         resources = await mcp_client.list_resources()
-#         prompts = await mcp_client.list_prompts()
-
-#         # Execute operations
-#         try:
-#             await mcp_client.call_tool(
-#                 "open_url", {"url": "https://rfpnotification.com"}
-#             )
-
-#             logger.info(await mcp_client.call_tool("get_markdown", {}))
-#             logger.info(await mcp_client.call_tool("get_webpage_html", {}))
-#             logger.info(await mcp_client.call_tool("get_screenshot", {}))
-#             await mcp_client.call_tool("close_driver", {})
-#         except Exception as e:
-#             logger.error(e)
-
-
 async def main():
     async with mcp_client:
         logger.info("MCP client connected")
         try:
             response = await gemini_client.aio.models.generate_content(
                 model="gemini-3.1-flash-lite-preview",
-                contents="open https://www.selenium.dev/selenium/web/formPage.html. Select 'Four' in all 3 the select tags. Take the screenshot. And quit the driver session",
+                contents="open the url https://jkb.bank.in/tenderNotice and give me the tender details in json format.",
                 config=genai.types.GenerateContentConfig(
                     temperature=0,
                     tools=[mcp_client.session],  # Pass the FastMCP client session

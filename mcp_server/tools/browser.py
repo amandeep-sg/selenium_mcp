@@ -20,22 +20,6 @@ async def open_url(url: str, ctx: Context) -> bool:
 
 
 @tool(
-    description="open url in new tab of the existing browser window",
-    tags={"manage url", "browser automation"},
-)
-async def open_new_tab(url: str, ctx: Context) -> bool:
-    try:
-        driver = get_driver()
-        driver.switch_to.new_window(WindowTypes.TAB)
-        driver.get(url)
-        logger.info(f"New tab opened {driver.current_url}")
-        return True
-    except Exception as e:
-        logger.error(e)
-        return False
-
-
-@tool(
     description="open url in new browser window",
     tags={"manage url", "browser automation"},
 )
@@ -99,6 +83,51 @@ async def switch_to_tab_by_url(url: str, ctx: Context) -> bool:
         web_driver.driver.switch_to.window(original_handle)
         logger.error(f"Tab with URL '{url}' not found")
         return False
+    except Exception as e:
+        logger.error(e)
+        return False
+
+
+@tool(
+    description="Refresh the current page",
+    tags={"manage url", "browser automation"},
+)
+async def refresh_page(ctx: Context) -> bool:
+    try:
+        driver = get_driver()
+        driver.refresh()
+        logger.info(f"Page refreshed {driver.current_url}")
+        return True
+    except Exception as e:
+        logger.error(e)
+        return False
+
+
+@tool(
+    description="press forward button",
+    tags={"manage url", "browser automation"},
+)
+async def press_forward(ctx: Context) -> bool:
+    try:
+        driver = get_driver()
+        driver.forward()
+        logger.info(f"Forward button pressed {driver.current_url}")
+        return True
+    except Exception as e:
+        logger.error(e)
+        return False
+
+
+@tool(
+    description="press back button",
+    tags={"manage url", "browser automation"},
+)
+async def press_back(ctx: Context) -> bool:
+    try:
+        driver = get_driver()
+        driver.back()
+        logger.info(f"Back button pressed {driver.current_url}")
+        return True
     except Exception as e:
         logger.error(e)
         return False

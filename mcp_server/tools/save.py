@@ -20,16 +20,18 @@ logger = logging.getLogger(__name__)
 async def get_markdown(ctx: Context) -> Union[str, bool]:
     try:
         driver = get_driver()
-        html_content = driver.find_element(By.TAG_NAME, "body").get_attribute(
-            "innerHTML"
+        element = driver.find_element(By.TAG_NAME, "body")
+        if element.is_enabled() and element.is_displayed():
+            html_content = element.get_attribute("innerHTML")
+            logger.info("Returned markdown")
+            return md(html_content)
+        logger.warn(
+            f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
         )
-        # with open("website.md", "w", encoding="utf-8") as f:
-        #     f.write(md(html_content))
-        logger.info("Returned markdown")
-        return md(html_content)
+        return f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
     except Exception as e:
         logger.error(f"Failed to save markdown: {e}")
-        return False
+        return f"Failed to save markdown. Error: {e}"
 
 
 @tool(
@@ -50,10 +52,10 @@ async def save_webpage_as_pdf(ctx: Context) -> bool:
         with open("website.pdf", "wb") as f:
             f.write(base64.b64decode(base64_pdf))
         logger.info("Saved PDF to website.pdf")
-        return True
+        return "Saved PDF to website.pdf"
     except Exception as e:
         logger.error(f"Failed to print to PDF: {e}")
-        return False
+        return f"Failed to print to PDF. Error: {e}"
 
 
 @tool(
@@ -63,14 +65,18 @@ async def save_webpage_as_pdf(ctx: Context) -> bool:
 async def get_webpage_html(ctx: Context) -> Union[str, bool]:
     try:
         driver = get_driver()
-        html_content = driver.find_element(By.TAG_NAME, "body").get_attribute(
-            "innerHTML"
+        element = driver.find_element(By.TAG_NAME, "body")
+        if element.is_displayed() and element.is_enabled():
+            html_content = element.get_attribute("innerHTML")
+            logger.info("Returned html")
+            return html_content
+        logger.warn(
+            f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
         )
-        logger.info("Returned html")
-        return html_content
+        return f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
     except Exception as e:
-        logger.error(f"Failed to save html: {e}")
-        return False
+        logger.error(f"Failed to get webpage html: {e}")
+        return f"Failed to get webpage html. Error: {e}"
 
 
 @tool(
@@ -84,5 +90,26 @@ async def get_screenshot(ctx: Context) -> Union[str, bool]:
         logger.info("Saved screenshot")
         return driver.get_screenshot_as_base64()
     except Exception as e:
-        logger.error(f"Failed to save screenshot: {e}")
-        return False
+        logger.error(f"Failed to get webpage screenshot: {e}")
+        return f"Failed to get webpage screenshot. Error: {e}"
+
+
+@tool(
+    description="Get element screenshot",
+    tags={"save webpage", "browser automation"},
+)
+async def get_element_screenshot(xpath: str, ctx: Context) -> Union[str, bool]:
+    try:
+        driver = get_driver()
+        element = driver.find_element(By.XPATH, xpath)
+        if element.is_displayed() and element.is_enabled():
+            element.screenshot(f"{xpath}.png")
+            logger.info(f"Saved screenshot {xpath}")
+            return element.screenshot()
+        logger.warn(
+            f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
+        )
+        return f"Element enabled: {element.is_enabled()} and element displayed: {element.is_displayed()}"
+    except Exception as e:
+        logger.error(f"Failed to get element's screenshot {xpath}. Error: {e}")
+        return f"Failed to get element's screenshot {xpath}. Error: {e}"
