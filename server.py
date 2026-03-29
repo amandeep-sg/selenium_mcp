@@ -44,7 +44,7 @@ async def main():
         try:
             response = await gemini_client.aio.models.generate_content(
                 model="gemini-3.1-flash-lite-preview",
-                contents="open the url https://jkb.bank.in/tenderNotice and give me the tender details in json format.",
+                contents="Open https://rfpnotification.com and join the waiting list by entering the email address: [test_user@example.com]",
                 config=genai.types.GenerateContentConfig(
                     temperature=0,
                     tools=[mcp_client.session],  # Pass the FastMCP client session

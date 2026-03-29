@@ -209,3 +209,8 @@ __marimo__/
 scraper_jobserver/
 
 .env
+.agents/
+.vscode/
+.DS_Store
+.png
+.pdf

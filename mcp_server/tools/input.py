@@ -119,3 +119,18 @@ async def select_option_by_xpath(xpath: str, option_text: str, ctx: Context) -> 
             f"Failed to select option: {option_text} from dropdown. Error: {e}"
         )
         return f"Failed to select option: {option_text} from dropdown. Error: {e}"
+
+
+@tool(
+    description="Execute javascript on the webpage",
+    tags={"input", "browser automation"},
+)
+async def execute_javascript(script: str, ctx: Context) -> str:
+    try:
+        driver = get_driver()
+        result = driver.execute_script(script)
+        logger.info("Executed javascript")
+        return f"Executed javascript. Result: {result}"
+    except Exception as e:
+        logger.error(f"Failed to execute javascript. Error: {e}")
+        return f"Failed to execute javascript. Error: {e}"
