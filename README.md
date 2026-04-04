@@ -1,7 +1,19 @@
 # Selenium_MCP
 
-This server is implemented in python to bridge the gap between the AI Assistant or (custom MCP clients) and Selenium Webdrivers. It exposes selenium webdriver functionalities as MCP tools allowing AI assistanct/MCP clients to user them to perform task for web automation, web testing or web scraping. It provide following set of tools to AI assistant/MCP clients:
+This server is implemented in python to bridge the gap between the AI Assistant or (custom MCP clients) and Selenium Webdrivers. It exposes selenium webdriver functionalities as MCP tools allowing AI assistanct/MCP clients to user them to perform task for web automation, web testing or web scraping.
+## Release Notes
+### Version 2.0.0 - Release 4 April 2026
+In this version, we have done some structural changes like seperating functions into save and get. Now save is just focused on saving files on the disk. And get is where LLM wants to get the data from the browser. 
 
+Following are the list of enhancements:
+1. Get: To get webpage as markdown, html, screenshot, element's screenshot, list of urls
+2. JS Executor: To execute javascript code for interacting with the webpage
+3. Files: To upload and download files
+4. Alerts: To handle alerts
+5. Click: Added drag and drop of elements by xpath
+6. File: To save webpage as pdf on disk
+
+### Version 1.0.0 - Release 31 March 2026
 1. Web Driver: Create new or quit exiting webdiver sessions
 2. Cookies: To manage cookies (add, delete, get, clear)
 3. Clicks: To perform clicks on elements (left client, right click, double click)
@@ -23,8 +35,7 @@ The tools leverages following technologies to support
 ## Upcomming
 Following are the list of features that will be added in the future:
 1. Tools to support Chrome Dev Tools & BiDi
-2. Tools to support Java Script Execution
-3. Tools to support Upload & Download of Files
+2. Enhance save functionality to save files in different formats
 
 
 ## Example

@@ -9,15 +9,17 @@ logger = logging.getLogger(__name__)
 
 global _driver
 
+
+# options
 options = Options()
-# options.add_argument("--headless")
+options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--disable-gpu")
 options.add_argument("--start-maximized")
 options.add_argument("--accept-insecure-certs")
 
-
+# services
 service = Service()
 service = webdriver.ChromeService(
     service_args=["--log-level=DEBUG"], log_output="webdriver_logs.log"

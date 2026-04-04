@@ -39,7 +39,7 @@ async def open_new_window(url: str, ctx: Context) -> str:
     description="close the current tab",
     tags={"manage url", "browser automation"},
 )
-async def close_current_tab(ctx: Context) -> str:
+async def close_current_browser_tab(ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.close()
@@ -54,7 +54,7 @@ async def close_current_tab(ctx: Context) -> str:
     description="switch to the window by url",
     tags={"manage url", "browser automation"},
 )
-async def switch_to_window_by_url(url: str, ctx: Context) -> str:
+async def switch_browser_window_by_url(url: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         original_handle = driver.current_window_handle
@@ -77,7 +77,7 @@ async def switch_to_window_by_url(url: str, ctx: Context) -> str:
     description="Refresh the current page",
     tags={"manage url", "browser automation"},
 )
-async def refresh_page(ctx: Context) -> str:
+async def refresh_current_browser_page(ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.refresh()
@@ -119,15 +119,30 @@ async def press_browser_back_button(ctx: Context) -> str:
 
 
 @tool(
-    description="Mange browser window size",
+    description="get window size",
     tags={"manage browser", "browser automation"},
 )
-async def manage_browser_window_size(width: int, height: int, ctx: Context) -> str:
+async def get_browser_window_size(ctx: Context) -> str:
+    try:
+        driver = get_driver()
+        window_size = driver.get_window_size()
+        logger.info(f"Window size: {window_size}")
+        return f"Window size: {window_size}"
+    except Exception as e:
+        logger.error(e)
+        return f"Failed to get window size. Error: {e}"
+
+
+@tool(
+    description="set window size",
+    tags={"manage browser", "browser automation"},
+)
+async def set_browser_window_size(width: int, height: int, ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.set_window_size(width, height)
-        logger.info(f"Browser window size set to {width}x{height}")
-        return f"Browser window size set to {width}x{height}"
+        logger.info(f"Window size set to {width}x{height}")
+        return f"Window size set to {width}x{height}"
     except Exception as e:
         logger.error(e)
-        return f"Failed to set browser window size. Error: {e}"
+        return f"Failed to set window size. Error: {e}"
