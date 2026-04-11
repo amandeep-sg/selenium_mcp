@@ -1,6 +1,6 @@
 import logging
 from fastmcp.tools import tool
-from typing import Union
+from typing import Union, List
 from fastmcp import Context
 from tools.web_driver import get_driver
 
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
     description="Find the accept cookies button and clicks it to accept all cookies",
     tags={"manage browser cookies", "browser automation"},
 )
-async def accept_all_cookies(ctx: Context) -> Union[None, int]:
+async def accept_all_cookies(ctx: Context) -> str:
     try:
         driver = get_driver()
         element_texts = ["Accept", "accept", "ok", "yes", "OK", "Yes"]
@@ -33,7 +33,7 @@ async def accept_all_cookies(ctx: Context) -> Union[None, int]:
     description="Get all the cookies from the chrome driver",
     tags={"manage browser cookies", "browser automation"},
 )
-async def get_all_cookies(ctx: Context) -> Union[None, list]:
+async def get_all_cookies(ctx: Context) -> List:
     try:
         driver = await ctx.get_state("driver")
         logger.info("Got all cookies")
@@ -62,7 +62,7 @@ async def delete_cookie_by_name(cookie_name: str, ctx: Context) -> Union[None, d
     description="delete all cookies",
     tags={"manage browser cookies", "browser automation"},
 )
-async def delete_all_cookies(ctx: Context) -> Union[None, dict]:
+async def delete_all_cookies(ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.delete_all_cookies()
@@ -77,9 +77,7 @@ async def delete_all_cookies(ctx: Context) -> Union[None, dict]:
     description="add cookie",
     tags={"manage browser cookies", "browser automation"},
 )
-async def add_cookie(
-    cookie_name: str, cookie_value: str, ctx: Context
-) -> Union[None, dict]:
+async def add_cookie(cookie_name: str, cookie_value: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.add_cookie({"name": cookie_name, "value": cookie_value})
@@ -94,7 +92,7 @@ async def add_cookie(
     description="set same-site cookie to 'Lax' or 'Strict' or 'None'",
     tags={"manage browser cookies", "browser automation"},
 )
-async def set_same_site_cookie(same_site: str, ctx: Context) -> Union[None, dict]:
+async def set_same_site_cookie(same_site: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         driver.add_cookie({"sameSite": same_site})

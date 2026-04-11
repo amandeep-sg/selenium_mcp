@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
     description="Type text into an element on the webpage",
     tags={"input", "browser automation"},
 )
-async def input_text_by_xpath(xpath: str, text: str, ctx: Context) -> bool:
+async def input_text_by_xpath(xpath: str, text: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         element = driver.find_element(By.XPATH, xpath)
@@ -36,7 +36,7 @@ async def input_text_by_xpath(xpath: str, text: str, ctx: Context) -> bool:
     description="Click checkbox on a webpage by xPath",
     tags={"input", "browser automation"},
 )
-async def click_checkbox_by_xpath(xpath: str, ctx: Context) -> bool:
+async def click_checkbox_by_xpath(xpath: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         element = driver.find_element(By.XPATH, xpath)
@@ -57,7 +57,7 @@ async def click_checkbox_by_xpath(xpath: str, ctx: Context) -> bool:
     description="Click radio button on a webpage by xPath",
     tags={"input", "browser automation"},
 )
-async def click_radio_button_by_xpath(xpath: str, ctx: Context) -> bool:
+async def click_radio_button_by_xpath(xpath: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         element = driver.find_element(By.XPATH, xpath)
@@ -78,7 +78,7 @@ async def click_radio_button_by_xpath(xpath: str, ctx: Context) -> bool:
     description="Get all select tag option from a dropdown on a webpage",
     tags={"input", "browser automation"},
 )
-async def get_all_options_by_xpath(xpath: str, ctx: Context) -> list[str]:
+async def get_all_options_by_xpath(xpath: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         element = driver.find_element(By.XPATH, xpath)
@@ -99,7 +99,7 @@ async def get_all_options_by_xpath(xpath: str, ctx: Context) -> list[str]:
     description="Select option from a dropdown (select tag) on a webpage",
     tags={"input", "browser automation"},
 )
-async def select_option_by_xpath(xpath: str, option_text: str, ctx: Context) -> bool:
+async def select_option_by_xpath(xpath: str, option_text: str, ctx: Context) -> str:
     try:
         driver = get_driver()
         element = driver.find_element(By.XPATH, xpath)

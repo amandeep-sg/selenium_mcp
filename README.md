@@ -1,7 +1,24 @@
-# Selenium_MCP
+![Selenium mcp logo](/images/selenium-mcp-logo-lm.png#gh-light-mode-only) 
+![Selenium mcp logo](/images/selenium-mcp-logo-dm.png#gh-dark-mode-only)
 
+
+![Static Badge](https://img.shields.io/badge/python-3.10-yellow)
+![Static Badge](https://img.shields.io/badge/fastmcp-3.1.1-teal)
+![Static Badge](https://img.shields.io/badge/selenium-4.41.0-darkgreen)
+![Static Badge](https://img.shields.io/badge/google-gemini-blue)
+
+
+# Introduction
 This server is implemented in python to bridge the gap between the AI Assistant or (custom MCP clients) and Selenium Webdrivers. It exposes selenium webdriver functionalities as MCP tools allowing AI assistanct/MCP clients to user them to perform task for web automation, web testing or web scraping.
+
 ## Release Notes
+### Version 2.0.1 - Release 11 April 2026
+In this version, minor enhancements are made in error code, return types and readme file
+1. Retun type changes from Union[None, dict], int, bool to str in 
+    1. cookies.py
+    2. find.py
+    3. get.py
+    4. input.py
 ### Version 2.0.0 - Release 4 April 2026
 In this version, we have done some structural changes like seperating functions into save and get. Now save is just focused on saving files on the disk. And get is where LLM wants to get the data from the browser. 
 
@@ -32,14 +49,15 @@ The tools leverages following technologies to support
 2. Selenium: For web automation
 3. Google GenAI: For AI assistant
 
-## Upcomming
+### Upcomming
 Following are the list of features that will be added in the future:
 1. Tools to support Chrome Dev Tools & BiDi
 2. Enhance save functionality to save files in different formats
+3. Enhanced error handling
+4. Multi browser support (Firefox, Edge, Safari, etc)
 
 
 ## Example
-
 Prompt: "Open https://rfpnotification.com and join the waiting list by entering the email address: [test_user@example.com]"
 
 |Before|After|
@@ -81,4 +99,10 @@ Run the client
 ```bash
 python server.py
 ```
+
+# Architecture
+The mcp has a very somple architecture as shown below. If this MCP is hosted locally then it communicates via stdio, if it is hosted on cloud then it communicates via http.
+
+![Architecture](/images/architecture.png)
+
 

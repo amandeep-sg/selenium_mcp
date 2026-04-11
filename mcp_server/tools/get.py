@@ -103,7 +103,7 @@ async def get_list_of_urls(
     type: Annotated[
         str, "filter to apply on urls using 'in' operator. By default none"
     ] = None,
-) -> dict:
+) -> Union[dict, str]:
     try:
         driver = get_driver()
         links = driver.find_elements(By.TAG_NAME, "a")

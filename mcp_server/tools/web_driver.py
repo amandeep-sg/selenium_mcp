@@ -18,6 +18,7 @@ options.add_argument("--disable-dev-shm-usage")
 options.add_argument("--disable-gpu")
 options.add_argument("--start-maximized")
 options.add_argument("--accept-insecure-certs")
+options.enable_bidi = True
 
 # services
 service = Service()
